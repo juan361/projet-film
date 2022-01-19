@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FilmController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ '/Users/atlas/Documents/Projet code/projet_film/projet-film/src/Controller/FilmController.php'|file_link(0) }}">src/Controller/FilmController.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/Users/atlas/Documents/Projet code/projet_film/projet-film/templates/film/index.html.twig'|file_link(0) }}">templates/film/index.html.twig</a></code></li>
+    </ul>
+    {% block body %}
+    {{ form_start(form) }}
+        {{ form_label(form.nom) }}
+        {{ form_widget(form.nom) }}
+   
+        {{ form_label(form.description) }}
+        {{ form_widget(form.) }}
+
+        {{ form_label(form.email) }}
+        {{ form_widget(form.email) }}
+
+        {{ form_rest(form) }}
+        <button type="submit">Enregistrer</button>
+    {{ form_end(form) }}
+{% endblock %}
+</div>
+{% endblock %}
