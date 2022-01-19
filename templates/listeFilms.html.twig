@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des films{% endblock %}
+
+{% block body %}
+    <h1>Liste des films</h1>
+    {% for film in films %}
+        <h2>{{ film.name }}</h2>
+        <div>Description : {{ film.description }}</div>
+        <div>Score : {{ film.score }}</div>
+        <div>Nombre de votants : {{ film.votersNumber }}</div>
+        <button type="submit">Supprimer</button>
+    {% endfor %}
+{% endblock %}
