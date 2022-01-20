@@ -5,7 +5,7 @@
 {% block body %}
     {#<p><a href="{{path()}}"">Nouveau film</a></p>#}
     
-    <p>Nouveau film</p>
+    <p><a href="{{path("ajoutFilm")}}"">Nouveau film</a></p>
     <h1>Liste des films</h1>
     {% for film in films %}
         {#<h2><a href="{{ path('detailsFilm', { 'id': film.id }) }}">{{ film.name}}</a></h2>#}

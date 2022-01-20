@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Service\SearchFilm;
 
 
 class FilmController extends AbstractController
@@ -28,11 +29,8 @@ class FilmController extends AbstractController
            "films" => $film
        ]);
     }
-    public function ajoutFilm(ManagerRegistry $doctrine)
-    {
 
-    }
-    public function new(Request $request, ManagerRegistry $doctrine, search $chercher){
+    public function ajoutFilm(Request $request, ManagerRegistry $doctrine, SearchFilm $chercher){
         $film = new Film();
         $form= $this->createForm(FilmType::class, $film);
         $form ->handleRequest($request);
