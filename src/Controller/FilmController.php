@@ -17,17 +17,16 @@ class FilmController extends AbstractController
             'controller_name' => 'FilmController',
         ]);
     }
-    public function show(ManagerRegistry $doctrine): Response
+    public function show(ManagerRegistry $doctrine):Response
     {
        $entitymanager = $doctrine->getManager();
        $film= $entitymanager->getRepository(Film::class)->findBy([],['note'=>'desc','nom'=>'asc']);
-       return $this->render('listFilms.html.twig', [
+       return $this->render('listeFilms.html.twig', [
            "films" => $film
        ]);
     }
 
- 
-    
+
     public function detailFilm(){
         // a remplir
     }
