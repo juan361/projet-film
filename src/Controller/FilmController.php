@@ -24,7 +24,7 @@ class FilmController extends AbstractController
     {
        $entitymanager = $doctrine->getManager();
        $film= $entitymanager->getRepository(Film::class)->findBy([],['note'=>'desc','nom'=>'asc']);
-       return $this->render('listFilms.html.twig', [
+       return $this->render('film/listFilms.html.twig', [
            "films" => $film
        ]);
     }
