@@ -1,12 +1,15 @@
 <?php
 namespace App\Service;
+
+use Symfony\Component\HttpFoundation\Response;
+
 class SearchFilm{
-    public static function search ($nomFilm) 
+    public static function search ($nomFilm):Response 
     {
         $descriptionFilm = NULL;
         $apiKey = '7173ced7';//a mettre 
-         
-        $url = "http://www.omdbapi.com/?i=tt3896198&apikey=7173ced7" . $apiKey . "&t=" . $nomFilm;
+        $nouveauNomFilm = str_replace(" ","+",$nomFilm);
+        $url = "http://www.omdbapi.com/?apikey=" .$apiKey. "&t=" . $nouveauNomFilm;
          
         $response = file_get_contents($url);
 
