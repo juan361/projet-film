@@ -4,12 +4,13 @@ namespace App\Service;
 use Symfony\Component\HttpFoundation\Response;
 
 class SearchFilm{
-    public static function search ($nomFilm):Response 
+    public static function search ($nomFilm) 
     {
         $descriptionFilm = NULL;
-        $apiKey = '7173ced7';//a mettre 
+        //$apiKey = '7173ced7';//a mettre 
+        $apiKey = 'b29d2fa';
         $nouveauNomFilm = str_replace(" ","+",$nomFilm);
-        $url = "http://www.omdbapi.com/?apikey=" .$apiKey. "&t=" . $nouveauNomFilm;
+        $url = "http://www.omdbapi.com/?apikey=" . $apiKey . "&t=" . $nouveauNomFilm;
          
         $response = file_get_contents($url);
 
@@ -20,8 +21,5 @@ class SearchFilm{
         {
             error_log($e->getMessage());
         }
-
-
-        return $descriptionFilm;
     }
 }
