@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+
 use App\Entity\Film;
 use App\Form\FilmType;
 use Doctrine\Persistence\ManagerRegistry;
@@ -30,7 +31,8 @@ class FilmController extends AbstractController
        ]);
     }
 
-    public function ajoutFilm(Request $request, ManagerRegistry $doctrine, SearchFilm $chercher){
+    public function ajoutFilm(Request $request, ManagerRegistry $doctrine, SearchFilm $chercher):Response
+    {
         $film = new Film();
         $form= $this->createForm(FilmType::class, $film);
         $form ->handleRequest($request);

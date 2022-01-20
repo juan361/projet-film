@@ -85,6 +85,12 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.5"
     },
+    "jleagle/curl-wrapper": {
+        "version": "1.0.0"
+    },
+    "jleagle/omdb-imdb-api-client": {
+        "version": "0.2.0"
+    },
     "laminas/laminas-code": {
         "version": "4.5.1"
     },
@@ -93,6 +99,9 @@
     },
     "nikic/php-parser": {
         "version": "v4.13.2"
+    },
+    "packaged/helpers": {
+        "version": "1.30.2"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"

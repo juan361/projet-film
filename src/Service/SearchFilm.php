@@ -1,11 +1,10 @@
 <?php
 namespace App\Service;
-
 class SearchFilm{
     public static function search ($nomFilm) 
     {
         $descriptionFilm = NULL;
-        $apiKey = 'taproprecléAPI';//a mettre 
+        $apiKey = '7173ced7';//a mettre 
          
         $url = "http://www.omdbapi.com/?i=tt3896198&apikey=7173ced7" . $apiKey . "&t=" . $nomFilm;
          

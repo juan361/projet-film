@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbd141fb9d35207b757fc3b4f1d06a00",
+    "content-hash": "04734058f31bddd1486c7bbb68ffff18",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1514,6 +1514,105 @@
             "time": "2021-05-22T16:11:15+00:00"
         },
         {
+            "name": "jleagle/curl-wrapper",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jleagle/curl-wrapper.git",
+                "reference": "8a404959f509ef886492fd23e8fb13410510acb4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jleagle/curl-wrapper/zipball/8a404959f509ef886492fd23e8fb13410510acb4",
+                "reference": "8a404959f509ef886492fd23e8fb13410510acb4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "packaged/helpers": "~1.1",
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jleagle\\CurlWrapper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Eagle",
+                    "email": "jimeagle@gmail.com",
+                    "homepage": "http://jimeagle.com"
+                }
+            ],
+            "description": "An object oriented wrapper around cURL",
+            "keywords": [
+                "curl",
+                "wrapper"
+            ],
+            "support": {
+                "issues": "https://github.com/Jleagle/curl-wrapper/issues",
+                "source": "https://github.com/Jleagle/curl-wrapper/tree/master"
+            },
+            "time": "2016-01-13T23:05:31+00:00"
+        },
+        {
+            "name": "jleagle/omdb-imdb-api-client",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Jleagle/omdb-imdb-api-client.git",
+                "reference": "c556ec2e3c378988f8452a945ea88f4221fec5fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Jleagle/omdb-imdb-api-client/zipball/c556ec2e3c378988f8452a945ea88f4221fec5fe",
+                "reference": "c556ec2e3c378988f8452a945ea88f4221fec5fe",
+                "shasum": ""
+            },
+            "require": {
+                "jleagle/curl-wrapper": "~1.0.0",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jleagle\\Imdb\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Eagle",
+                    "email": "jimeagle@gmail.com",
+                    "homepage": "http://jimeagle.com"
+                }
+            ],
+            "description": "A package to retrieve movies and TV information from IMDB using the API at omdbapi.com",
+            "keywords": [
+                "api",
+                "client",
+                "helper",
+                "imdb",
+                "omdb"
+            ],
+            "support": {
+                "issues": "https://github.com/Jleagle/omdb-imdb-api-client/issues",
+                "source": "https://github.com/Jleagle/omdb-imdb-api-client/tree/master"
+            },
+            "time": "2017-10-02T22:24:26+00:00"
+        },
+        {
             "name": "laminas/laminas-code",
             "version": "4.5.1",
             "source": {
@@ -1677,6 +1776,51 @@
                 }
             ],
             "time": "2021-10-01T21:08:31+00:00"
+        },
+        {
+            "name": "packaged/helpers",
+            "version": "1.30.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/packaged/helpers.git",
+                "reference": "ea36f5f9246b02625742c7982b6e39b3163d81c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/packaged/helpers/zipball/ea36f5f9246b02625742c7982b6e39b3163d81c8",
+                "reference": "ea36f5f9246b02625742c7982b6e39b3163d81c8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Packaged\\Helpers\\": "src",
+                    "Packaged\\Tests\\": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brooke Bryan",
+                    "email": "brooke@bajb.net"
+                }
+            ],
+            "description": "Generic PHP Helper Classes",
+            "support": {
+                "issues": "https://github.com/packaged/helpers/issues",
+                "source": "https://github.com/packaged/helpers/tree/1.30.2"
+            },
+            "time": "2021-06-14T10:57:34+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
