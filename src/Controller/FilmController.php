@@ -3,10 +3,13 @@
 namespace App\Controller;
 
 use App\Entity\Film;
+use App\Form\FilmType;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
 
 class FilmController extends AbstractController
 {
@@ -25,8 +28,28 @@ class FilmController extends AbstractController
            "films" => $film
        ]);
     }
+    public function ajoutFilm(ManagerRegistry $doctrine)
+    {
 
+    }
+    public function new(Request $request, ManagerRegistry $doctrine, search $chercher){
+        $film = new Film();
+        $form= $this->createForm(FilmType::class, $film);
+        $form ->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $film = $form->getData();
+            
+            $film->setDescription($chercher->search($film->getNom()));
+            $entitymanager = $doctrine->getManager();
+            $entitymanager->persist($film);
 
+            $entitymanager->flush();
+            return $this->redirect('films');
+
+        }
+
+        return $this->renderForm('film/ajout.html.twig', ['form'=> $form]);
+    }
     public function detailFilm(){
         // a remplir
     }

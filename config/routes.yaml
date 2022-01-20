@@ -1,4 +1,9 @@
 films:
     path: /index
     controller: App\Controller\FilmController::show
+
+ajout_Film:
+    path: /ajout/film
+    controller: App\Controller\Filmcontroller::new
+
     

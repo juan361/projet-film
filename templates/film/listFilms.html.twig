@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des films{% endblock %}
+
+{% block body %}
+    {#<p><a href="{{path()}}"">Nouveau film</a></p>#}
+    
+    <p>Nouveau film</p>
+    <h1>Liste des films</h1>
+    {% for film in films %}
+        {#<h2><a href="{{ path('detailsFilm', { 'id': film.id }) }}">{{ film.name}}</a></h2>#}
+        <h2>{{ film.nom}}</h2>
+        <div>Description : {{ film.description }}</div>
+        <div>Score : {{ film.note }}</div>
+        <div>Nombre de votants : {{ film.getNbreVotants() }}</div>
+        <button type="submit">Supprimer</button>
+    {% endfor %}
+{% endblock %}

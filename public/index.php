@@ -1,4 +1,3 @@
-<a href="../src/Controller/createFilm.php">Nouveau film</a>
 <?php
 
 use App\Kernel;
