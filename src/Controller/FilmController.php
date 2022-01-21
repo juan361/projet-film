@@ -34,6 +34,7 @@ class FilmController extends AbstractController
     public function ajoutFilm(Request $request, ManagerRegistry $doctrine, SearchFilm $chercher):Response
     {
         $film = new Film();
+        $film->setNbreVotants(1);
         $form= $this->createForm(FilmType::class, $film);
         $form ->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
@@ -44,13 +45,13 @@ class FilmController extends AbstractController
             $entitymanager->persist($film);
 
             $entitymanager->flush();
-            return $this->redirect('films');
+            return $this->redirect("/index");
 
         }
 
         return $this->renderForm('film/ajout.html.twig', ['form'=> $form]);
     }
-    public function detailFilm(){
+    public function detailsFilm(){
         // a remplir
     }
 }

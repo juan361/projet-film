@@ -21,5 +21,6 @@ class SearchFilm{
         {
             error_log($e->getMessage());
         }
+        return $descriptionFilm;
     }
 }
