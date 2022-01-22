@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails du film{% endblock %}
+
+{% block body %}
+    {#<p><a href="{{path("ajoutFilm")}}"">Nouveau film</a></p>#}
+    <h1>{{film.nom}}</h1>
+        <div>Description : {{ film.description }}</div>
+        <div>Score : {{ film.note }}</div>
+        <div>Nombre de votants : {{ film.getNbreVotants() }}</div>
+        <button type="submit">Supprimer</button>
+
+{% endblock %}
