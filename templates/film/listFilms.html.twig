@@ -9,7 +9,7 @@
     <h1>Liste des films</h1>
     {% for film in films %}
         {#<h2><a href="{{ path('detailsFilm', { 'id': film.id }) }}">{{ film.name}}</a></h2>#}
-        <h2> <a href="{{path('detailsFilm', { 'id': film.id })}}">{{film.nom}}</a></h2>
+        <h2><a href="{{ path('details', {'id':film.id}) }}">{{ film.nom }}</a></h2>
         <div>Description : {{ film.description }}</div>
         <div>Score : {{ film.note }}</div>
         <div>Nombre de votants : {{ film.getNbreVotants() }}</div>

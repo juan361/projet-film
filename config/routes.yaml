@@ -6,6 +6,6 @@ ajoutFilm:
     path: /ajout/film
     controller: App\Controller\FilmController::ajoutFilm
 
-detailsFilm:
-    path: detail/film
-    controller: App\Controller\FilmController::detailsFilm
+details:
+    path: detail/film/{id}
+    controller: App\Controller\FilmController::details
