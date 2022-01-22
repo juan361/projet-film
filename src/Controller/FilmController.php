@@ -51,7 +51,12 @@ class FilmController extends AbstractController
 
         return $this->renderForm('film/ajout.html.twig', ['form'=> $form]);
     }
-    public function detailsFilm(){
-        // a remplir
+    public function detailsFilm(ManagerRegistry $doctrine, int $id):Response
+    {
+       $entitymanager = $doctrine->getManager();
+       $film= $entitymanager->getRepository(Film::class)->find($id);
+       return $this->render('film/listFilms.html.twig', [
+           "films" => $film
+       ]);
     }
 }
