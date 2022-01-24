@@ -54,6 +54,6 @@ class FilmController extends AbstractController
         $em = $doctrine->getManager();
         $em->remove($film);
         $em->flush();
-        return $this->render("/index");
+        return $this->redirect("/index");
     }
 }
