@@ -9,3 +9,7 @@ ajoutFilm:
 details:
     path: detail/film/{id}
     controller: App\Controller\FilmController::details
+
+delete:
+    path: delete/film/{id}
+    controller: App\Controller\FilmController::delete

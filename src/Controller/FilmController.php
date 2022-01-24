@@ -15,13 +15,6 @@ use App\Service\SearchFilm;
 
 class FilmController extends AbstractController
 {
-    
-    public function index(): Response
-    {
-        return $this->render('film/index.html.twig', [
-            'controller_name' => 'FilmController',
-        ]);
-    }
     public function show(ManagerRegistry $doctrine):Response
     {
        $entitymanager = $doctrine->getManager();
@@ -56,5 +49,11 @@ class FilmController extends AbstractController
        $entitymanager = $doctrine->getManager();
        $film= $entitymanager->getRepository(Film::class)->find($id);
        return $this->render('film/details.html.twig', ["film" => $film]);
+    }
+    public function delete(ManagerRegistry $doctrine, Film $film){
+        $em = $doctrine->getManager();
+        $em->remove($film);
+        $em->flush();
+        return $this->render("/index");
     }
 }

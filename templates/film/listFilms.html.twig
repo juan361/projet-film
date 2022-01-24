@@ -13,6 +13,6 @@
         <div>Description : {{ film.description }}</div>
         <div>Score : {{ film.note }}</div>
         <div>Nombre de votants : {{ film.getNbreVotants() }}</div>
-        <button type="submit">Supprimer</button>
+        <button type="submit"><a href="{{path('delete', {'id': film.id})}}">Supprimer</a></button>
     {% endfor %}
 {% endblock %}
