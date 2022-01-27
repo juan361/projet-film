@@ -74,7 +74,7 @@ class FilmController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
             $data =$form->getData();
-            if($data['mdp']=='1234'){
+            if($data['mdp']==$this->getParameter('mdp')){
                 $em = $doctrine->getManager();
                 $em->remove($film);
                 $em->flush();
