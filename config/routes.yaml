@@ -13,3 +13,7 @@ details:
 delete:
     path: delete/film/{id}
     controller: App\Controller\FilmController::delete
+
+importCsv:
+    path: import/csv
+    controller: App\Controller\FilmController::importCsv

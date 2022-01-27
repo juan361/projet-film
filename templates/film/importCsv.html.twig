@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}import CSV{% endblock %}
+
+{% block body %}
+<h1>Importez votre fichier CSV</h1>
+<p> respectez la nomenclature du CSV </p>
+<ul>
+<li>nom :</li>
+<li>description :</li>
+<li>note</li>
+</ul>
+{{form(form)}}
+
+{%endblock%}
